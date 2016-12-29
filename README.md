@@ -1,55 +1,73 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title></title>
-<style type="text/css">
-html, body {
-    width:100%;
-    margin:0px auto;
-    padding:0px auto;
-}
-.div1 {
-    height:1500px;
-}
-.div2 {
-    width:200px;
-    height:200px;
-    background-color:#3399FF;
-    margin-top:100px;
-}
-.div2_1{
-    position:fixed;
-    width:200px;
-    height:200px;
-    z-index:999;
-    background-color:#3399FF;
-    top:0px;
-    
-}
-*html{
-    background-image:url(about:blank);
-    background-attachment:fixed;
-}
-  
-</style>
-<script type="text/javascript">
-window.onscroll=function(){
-    var t=document.documentElement.scrollTop||document.body.scrollTop; 
-    var div2=document.getElementById("div2");
-    if(t>= 100){
-        div2.className = "div2_1";
-    }else{
-        div2.className = "div2";
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ <script>
+    function verifyTel1(){
+        var regexp1=/^[0-9]{1,4}$/;        
+        var t1 = document.getElementById("t1").value;
+        if(!regexp1.test(t1)){
+            document.getElementById("msg").style.display="inline";
+            document.getElementById("msg").innerHTML="请输入正确的房屋面积";    
+            document.getElementById("t1").focus();  //让输入框获得焦点
+            document.getElementById("t1").select(); //选中输入框的内容
+            return false;
+        }else{
+            document.getElementById("msg").style.display="none";
+            return true;
+        }
     }
-}
-</script>
-</head>
-<body>
-<div class="div1">
-    <div id="div2" class="div2"></div>
-</div>
  
-</body>
+    function verifyTel2(){
+        var regexp2=/^1[3|4|5|7|8]\d{9}$/;
+        var t2 = document.getElementById("t2").value;
+        if(!regexp2.test(t2)){
+            document.getElementById("msg2").style.display="inline";
+            document.getElementById("msg2").innerHTML="请输入正确的电话号码！";
+            document.getElementById("t2").focus();  //让输入框获得焦点
+            document.getElementById("t2").select(); //选中输入框的内容
+            return false;
+        }else{
+            document.getElementById("msg2").style.display="none";
+            return true;
+        }
+    }
+     //提交按钮样式
+     function test(){
+     	if (verifyTel1() && verifyTel2()) {
+     		document.getElementById("btn").disabled=false;
+     	};
+     }
+    //提交表单
+    function submitForm(){
+        if(verifyTel1() && verifyTel2()){
+        	
+            document.getElementById("allow").submit();
+        }else{
+ 
+  document.getElementById("btn").disabled=true;
+}
+    }
+     
+ </script>
+ </head>
+ <body>
+<form method="post" action="" id="allow">
+<div id="form">
+    <div class="int">
+        <label for="username">房屋面积：</label>
+        <input type="text" id="t1" onblur="test()" class="input" />
+    </div><div id="msg"></div>
+    <div class="int">
+        <label for="txtpwd">电话号码：</label>
+        <input type="text" id="t2" onblur="test()"class="input" />
+    </div><div id="msg2"></div>
+<br>
+<input type="button" id="btn" value="提交" onclick="submitForm()" disabled="true">
+</form>
+ </body>
 </html>
-<script type="text/javascript" src="/skin/js/fa5ea90bd23348cda66501dc07e822fa.js"></script>
-<script type="text/javascript" src="/skin/js/bdmap.js"></script>
