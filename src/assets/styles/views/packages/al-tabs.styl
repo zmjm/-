@@ -1,0 +1,97 @@
+/**
+ * Author: Alex(https://github.com/zlalex);
+ * ConContact: zhouliang1006@126.com
+ * (c) 2017 - 2018 by Nanjing 
+ */
+.al-tabs__group{
+    font-size: 14px;
+    &::before{
+        content: '';
+        display: table;
+    }
+    &::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+    &.edit{
+        border-bottom: 0 none;
+        background-color: $gf;
+        .al-tabs__pane{
+            bottom: 0;
+            transition: all .2s;
+            .fa{
+                display: none;
+            }
+            &:hover{
+                padding-right: 24px;
+                transition: all .2s;
+                .fa{
+                    position: relative;
+                    display: inline-block;
+                    right: -8px;
+                    color: $default-blue;
+                }
+            }
+            &.active{
+                background-color: $f5;
+                border-bottom-color: $f5;
+                &::before{
+                    height: 0;
+                }
+            }
+        }
+    }
+}
+
+.al-tabs__default{
+    display: flex;
+    flex-wrap: wrap;
+    .al-tabs__content{
+        width: 100%;
+    }
+    .al-tabs__pane{
+        flex: 1;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+.al-tabs__card{
+    border-bottom: 1px solid $e1;
+    .al-tabs__pane{
+        position: relative;
+        bottom: -1px;
+        float: left;
+        padding: 0 20px;
+        line-height: 30px;
+        cursor: pointer;
+        border-width: 1px;
+        border-style: solid;
+        border-color: transparent;
+        &.active{
+            color: $default-blue;
+            border-color: $e5;
+            border-bottom-color: $gf;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                top: -1px;
+                left: 0;
+                height: 2px;
+                background-color: $default-blue;
+            }
+        }
+    }
+}
+
+.al-tabs__wrap{
+    background-color: $gf;
+    .al-tabs__card{
+        .active{
+            background-color: $f5;
+            border-bottom-color: $f5;
+        }
+    }
+}

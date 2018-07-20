@@ -1,0 +1,74 @@
+/**
+ * Author: Alex(https://github.com/zlalex);
+ * ConContact: zhouliang1006@126.com
+ * (c) 2017 - 2018 by Nanjing 
+ */
+.al-layout__page{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.al-layout__view
+.al-layout__group,
+.al-layout__footer{
+    position: absolute;
+    width: 100%;
+}
+
+.al-layout__view{
+    height: 100%;
+}
+
+.al-layout__header{
+    height: 50px;
+    color: $gf;
+    background-color: $bgcolor-header;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .6);
+}
+
+.al-layout__group{
+    top: 50px;
+    left: 0;
+    height: calc( 100% - 80px);
+}
+
+.al-layout__sliderbar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 180px;
+    height: 100%;
+    background-color: $bgcolor-silderbar;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, .6); 
+    overflow: hidden;
+}
+
+.al-sliderbar__scroll{
+    position: relative;
+    width: calc(100% + 18px);
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.al-layout__content{
+    margin-left: 180px;
+    background-color: $f5;
+}
+
+.al-search__group,
+.al-form__group{
+    .al-button{
+        width: 68px;
+        text-align: center;
+    }
+}
+
+.al-layout__footer{
+    bottom: 0;
+    left: 0;
+    color: $g6;
+    line-height: 30px;
+    background-color: $bgcolor-footer;
+}

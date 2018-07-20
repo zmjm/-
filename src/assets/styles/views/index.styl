@@ -1,0 +1,104 @@
+.mes-logo{
+    width: 180px;
+    text-align: center;
+    font-size: 0;
+    line-height: 50px;
+    img{
+        width: 150px;
+    }
+}
+
+.mes-member{
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.mes-logo,
+.mes-member{
+    &:hover{
+        box-shadow: 0 0 8px 0 rgba(0,0,0,.4) inset;
+        background-color: #2e313a !important;
+    }
+}
+.mes-form__group,
+.mes-search__group{
+    .al-form__item{
+        margin: 0 10px 10px 0;
+    }
+    .al-form__label{
+        width: 70px;
+        padding-right: 0;
+        text-align: left;
+    }
+    .al-form__input{
+        margin-left: 70px;
+    }
+    .mes-large__form-item{
+        .al-form__label{
+            width: 80px;
+        }
+        .al-form__input{
+            margin-left: 90px;    
+        }
+    }
+    .mes-small__form-item{
+        .al-form__label{
+            width: 60px;
+        }
+        .al-form__input{
+            margin-left: 70px;    
+        }
+    }
+}
+
+.mes-crumbs__title{
+    position: relative;
+    padding-left: 1.6em;
+    font-size: 16px;
+    line-height: 39px;
+    border-bottom: 1px solid $e5;
+    box-shadow: 0 5px 5px -5px $e5;
+    background-color: $gf;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 1em;
+        width: 4px;
+        height: 18px;
+        background-color: $default-blue;
+    }
+}
+
+.mes-tabs{
+    margin-bottom: 10px;
+}
+
+.mes-edit__datagrid{
+    .el-table{
+        input{
+            border: 0 none;
+            padding-left: 4px;
+            background: transparent;
+        }
+    }    
+}
+
+.mes-dialog__datagrid{
+    .el-table{
+        .cell{
+            padding: 2px;
+        }
+        input{
+            border: 0 none;
+            padding-left: 4px;
+        }
+        .el-input__suffix{
+            display: none;
+        }
+    }
+}
+.mes-view__section{
+    padding: 10px;
+}

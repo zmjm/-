@@ -1,0 +1,179 @@
+.element-replace{
+    .el-menu{
+        border-right: 0 none;
+        width: 180px;
+        .el-menu-item{
+            min-width: inherit;
+            &.is-active{
+                background-color: $default-blue !important;
+                color: $gf;
+            }
+            &:hover{
+                box-shadow: 0 0 8px rgba(0,0,0,.4) inset;
+            }
+        }
+    }
+    .fa{
+        color: $gf;
+    }
+    .el-table{
+        border-bottom: 1px solid $e1;
+        box-shadow: 0 5px 10px -5px rgba(0, 0, 0, .1);
+        &::before{
+            height: 0;
+        }
+        thead.is-group th{
+                background-color: #e4f3ff;
+        }
+        .cell{
+            font-size: 12px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        th{
+            font-size: 14px;
+            text-align: center;
+            background-color: #e4f3ff;
+        }
+        td{
+            text-align: left; 
+            &:first-child{
+                text-align: center;    
+            }
+            &:last-child{
+                padding-right: 5px;
+                text-align: right;    
+            }
+        }
+        td,
+        th{
+            padding: 0;
+            color: $g3;
+            font-weight: 400;
+            height: 30px;
+            cursor: pointer;
+        }
+        .current-row{
+            td{
+                background-color: #e4f3ff; 
+            }    
+        }
+    }
+    .el-pagination{
+        margin: 5px 0;
+        padding: 0;
+        font-size: 14px;
+        color: $g3;
+        font-weight: 400;
+    }
+    .el-dialog__header{
+        padding: 8px;
+        background-color: $default-blue ;
+    }
+    .el-dialog__title{
+        color: $gf;
+        font-size: 16px;
+    }
+    .el-dialog__headerbtn{
+        top: 10px;
+        .el-dialog__close{
+            color: $gf;
+        }
+    }
+    .el-dialog__body{
+        padding: 15px;
+    }
+    .is-disabled{
+        .el-input__inner{
+            color: $g3;
+            background-color: rgb(235, 235, 228);
+        }
+    }
+    .el-input__inner{
+        height: 30px !important;
+        padding-right: 0;
+    }
+    .el-message{
+        top: 30%;
+    }
+    .el-message-box{
+        padding-bottom: 0;
+        border: 0 none;
+        background-color: transparent;
+        width: 300px;
+        .el-button{
+            padding: 0 10px;        
+            border-radius: 2px;
+            font-size: 14px;
+            line-height: 28px;
+        }
+        .el-button--primary{
+            background-color: $default-blue;
+            border-color: $default-blue;
+        }
+    }
+    .el-message-box__header{
+        padding: 0 14px;
+        background-color: $default-blue;
+        border-radius: 4px 4px 0 0;
+    }
+    .el-message-box__headerbtn{
+        top: 11px;
+        right: 14px;    
+    }
+    .el-message-box__close{
+        color: $gf;
+    }
+    .el-message-box__title{
+        font-size: 14px;
+        color: $gf;
+        line-height: 36px;
+    }
+    .el-message-box__content{
+        padding: 14px;
+        background-color: $gf;
+    }
+    .el-message-box__btns{
+        padding-bottom: 14px;
+        background-color: $gf;
+    }
+    .el-date-editor{
+        width: 100%;
+        .el-input__prefix{
+            display: none;
+        }
+    }
+    .mes-tabs__crumbs{
+        .el-tabs__header{
+            margin-bottom: 0;
+            background-color: $gf;
+        }        
+        .is-active{
+            background-color: $f5;
+            border-bottom-color: $f5 !important;
+        }
+    }
+    .mes-search__group,
+    .mes-form__group{
+        .el-select{
+            width: 120px;
+        }
+        .el-input__inner{
+            border-radius: 0;
+        }
+    }
+    .gutter{
+        display: none;
+    }
+    .c-header{
+        padding: 2px 10px;    
+    }
+    .c-pane-container{
+        position: relative;
+        z-index: 1;    
+    }
+    .c-day-content-wrapper{
+        height: 28px;
+    }
+}
